@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Krabbelroboter", "Krabbelroboter\Krabbelroboter.csproj", "{A5E4184A-6709-419D-9BC0-FFC3AB7E814F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5E4184A-6709-419D-9BC0-FFC3AB7E814F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5E4184A-6709-419D-9BC0-FFC3AB7E814F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5E4184A-6709-419D-9BC0-FFC3AB7E814F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5E4184A-6709-419D-9BC0-FFC3AB7E814F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82BC0F23-BFC4-46B7-8CF4-C430DCFCDB5A}
+	EndGlobalSection
+EndGlobal

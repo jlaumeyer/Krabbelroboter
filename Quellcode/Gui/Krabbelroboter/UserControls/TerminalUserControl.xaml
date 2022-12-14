@@ -1,0 +1,115 @@
+﻿<UserControl x:Class="Krabbelroboter.UserControls.TerminalUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Krabbelroboter.UserControls"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             mc:Ignorable="d" 
+             d:DesignHeight="430" d:DesignWidth="350">
+    <StackPanel Orientation="Vertical" Width="350">
+        <StackPanel.Resources>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="Padding" Value="0 5" />
+                <Setter Property="Margin" Value="0 0 0 5" />
+            </Style>
+            <Style TargetType="TextBlock">
+                <Setter Property="FontSize" Value="14" />
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="FontSize" Value="14" />
+            </Style>
+        </StackPanel.Resources>
+        <Image Width="16" Height="16" HorizontalAlignment="Right">
+            <Image.Style>
+                <Style TargetType="{x:Type Image}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsConnected}" Value="True">
+                            <Setter Property="Source" Value="/images/online.png"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsConnected}" Value="False">
+                            <Setter Property="Source" Value="/images/offline.png"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>
+        <local:AddressUserControl BorderThickness="0 0 0 2" BorderBrush="Black" Margin="0 0 0 10" />
+        <Grid Width="120" Height="80" Margin="0 0 0 10" HorizontalAlignment="Left">
+            <Grid.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="White" />
+                </Style>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="1" Grid.Column="0"
+                    Command="{Binding Path=SendCommand}" CommandParameter="3">
+                <Image Source="/images/spitze-links.png" />
+            </Button>
+            <Button Grid.Row="1" Grid.RowSpan="1" Grid.Column="2"
+                    Command="{Binding Path=SendCommand}" CommandParameter="1">
+                <Image Source="/images/spitze-rechts.png" />
+            </Button>
+            <Button Grid.Row="0" Grid.Column="1"
+                    Command="{Binding Path=SendCommand}" CommandParameter="0">
+                <Image Source="/images/spitze-oben.png" />
+            </Button>
+            <Button Grid.Row="1" Grid.Column="1"
+                    Command="{Binding Path=SendCommand}" CommandParameter="2">
+                <Image Source="/images/spitze-unten.png" />
+            </Button>
+        </Grid>
+        <Border BorderThickness="0 2 0 2" BorderBrush="Black" Padding="0 10 0 5" Margin="0 0 0 10">
+            <Grid Margin="0 0 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" Command="{Binding Path=SendCommand}" CommandParameter="4">
+                    Erkunden
+                </Button>
+                <DockPanel Margin="0 0 0 5" Grid.Row="1" Grid.Column="0" >
+                    <xctk:IntegerUpDown DockPanel.Dock="Left" Margin="0 0 10 0" Width="50"
+                                        Minimum="0" Maximum="100" AllowTextInput="False" Value="{Binding Path=Iterations}" />
+                    <Button Command="{Binding Path=SendCommand}" Margin="0" CommandParameter="5">
+                        Lernen
+                    </Button>
+                </DockPanel>
+                <Button Grid.Row="2" Grid.Column="0" Command="{Binding Path=SendCommand}" CommandParameter="6">
+                    Laufen
+                </Button>
+                <Button Grid.Row="3" Grid.Column="0" Command="{Binding Path=SendCommand}" CommandParameter="9">
+                    Q-Lernen
+                </Button>
+                <Button Grid.Row="0" Grid.RowSpan="4" Grid.Column="2" Command="{Binding Path=StopCommand}">
+                    Stop
+                </Button>
+            </Grid>
+        </Border>
+        <Button Command="{Binding Path=SendCommand}" CommandParameter="7">Reset</Button>
+        <Button Command="{Binding Path=SendCommand}" CommandParameter="8">Push</Button>
+        <Border BorderThickness="1" BorderBrush="Black" Margin="0 5 0 10" />
+        <CheckBox IsChecked="{Binding Path=ShowUpdates}" HorizontalAlignment="Left" FontSize="14" >
+            Update
+        </CheckBox>
+    </StackPanel>
+</UserControl>

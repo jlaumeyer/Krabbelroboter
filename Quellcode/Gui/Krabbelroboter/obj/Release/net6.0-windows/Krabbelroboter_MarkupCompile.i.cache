@@ -1,0 +1,20 @@
+﻿Krabbelroboter
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Users\Jan Laumeyer\Documents\GitHub\Krabbelroboter\Quellcode\Gui\Krabbelroboter\obj\Release\net6.0-windows\
+Krabbelroboter
+none
+false
+TRACE;RELEASE;NET;NET6_0;NETCOREAPP
+C:\Users\Jan Laumeyer\Documents\GitHub\Krabbelroboter\Quellcode\Gui\Krabbelroboter\App.xaml
+5-671212207
+
+161752768583
+1991457835161
+UserControls\AddressUserControl.xaml;UserControls\MarkovUserControl.xaml;UserControls\StateUserControl.xaml;UserControls\TerminalUserControl.xaml;Views\MainView.xaml;
+
+False
+

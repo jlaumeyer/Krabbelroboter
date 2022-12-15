@@ -10,4 +10,6 @@ Folgende Schritte leiten zum Aufbau und Betrieb des Roboters an:
 + Herstellen einer Internetverbindung durch das Einstecken und Einrichten eines W-LAN-Sticks.
 + Übertragen des Programmcodes aus dem Ordner [dev/Krabbelroboter](dev/Krabbelroboter) auf den EV3 Baustein. Das ist zum Beispiel mit der Entwicklungsumgebung [Visual Studio Code](https://code.visualstudio.com/) und der Erweiterung [ev3dev-browser](https://marketplace.visualstudio.com/items?itemName=ev3dev.ev3dev-browser) komfortabel möglich.
 
-Der Roboter öffnet nach Programmstart einen Webserver und wartet auf eine eingehende Verbindung. IP-Adresse und Port werden auf der Konsole des Bausteins ausgegeben. Um mit dem Roboter zu interagieren, ihn lernen und laufen zu lassen, wird ein zweites Programm benötigt. Dieses ist im Ordner [dev/Gui](dev/Gui) abgelegt.
+Der Roboter öffnet nach Programmstart einen Webserver und wartet auf eingehende Verbindungen. IP-Adresse und Port werden auf der Konsole des Bausteins ausgegeben. Um mit dem Roboter zu interagieren, ihn lernen und laufen zu lassen, wird ein zweites Programm benötigt. Dieses ist im Ordner [dev/Gui](dev/Gui) abgelegt. Über die grafische Benutzeroberfläche kann man sich mit dem Roboter verbinden, interne Zustände beobachten, manipulieren und Bewebungssequenzen ausführen.
+
+![gui](https://user-images.githubusercontent.com/120554609/207822779-ba066f08-5ffd-491d-9099-99302e4dd32a.png)
